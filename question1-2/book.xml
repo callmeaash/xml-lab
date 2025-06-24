@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<books xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="book.xsd"> 
+    <book>
+        <title>Harry Potter and the Sorcerer's Stone</title>
+    
+        <author>J.K. Rowling</author>
+    
+        <isbn>1338878921</isbn>
+    
+        <publisher>Scholastic</publisher>
+
+        <edition>1</edition>
+    
+        <price>$7.0</price>
+    </book>
+</books>

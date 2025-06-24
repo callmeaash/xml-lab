@@ -1,0 +1,1 @@
+count(for $b in doc("book.xml")//book[author = "Abiteboul"] return $b)

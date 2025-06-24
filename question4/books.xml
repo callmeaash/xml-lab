@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="books.xsd">
+
+        <book>
+            <title>Harry Potter</title>
+            <isbn>1928291219</isbn>
+            <author title="Ms">
+                <firstname>J.K</firstname>
+                <lastname>Rolling</lastname>
+            </author>
+            <price currency="NPR">600</price>
+        </book>
+</books>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schools xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="schools.xsd">
+
+            <school id="1">
+                <name>Texas</name>
+                <location>USA</location>
+                <staff id="T10">
+                    <name>alakh</name>
+                    <category>academic</category>
+                    <address>
+                        <street>massac</street>
+                        <postcode>20000</postcode>
+                    </address>
+                </staff>
+
+                <subjects>
+                    <subject>
+                        <code>CACS200</code>
+                        <name>Computer Science</name>
+                        <description>nice</description>
+                        <capacity>300</capacity>
+                        <teacher ref="T10" />
+                    </subject>
+                </subjects>
+            </school>
+</schools>

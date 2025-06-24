@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="restrictedInteger">
+      <xs:restriction base="xs:integer">
+        <xs:maxInclusive value="600"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="books">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="book" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="title" type="xs:string"/>
+                            <xs:element name="isbn" type="xs:string"/>
+                            <xs:element name="author" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="firstname" type="xs:string"/>
+                                        <xs:element name="middlename" type="xs:string" minOccurs="0"/>
+                                        <xs:element name="lastname" type="xs:string"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="title" default="Mr">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="Mr"/>
+                                                <xs:enumeration value="Ms"/>
+                                                <xs:enumeration value="Mrs"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="price">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="restrictedInteger">
+                                            <xs:attribute name="currency" default="NPR">
+                                                <xs:simpleType>
+                                                    <xs:restriction base="xs:string">
+                                                        <xs:enumeration value="NPR"/>
+                                                        <xs:enumeration value="INR"/>
+                                                        <xs:enumeration value="USD"/>
+                                                    </xs:restriction>
+                                                </xs:simpleType>
+                                            </xs:attribute>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+        <xs:unique name="uniqueISBN">
+            <xs:selector xpath="book"/>
+            <xs:field xpath="isbn"/>
+        </xs:unique>
+    </xs:element>
+</xs:schema>

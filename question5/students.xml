@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<students xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="students.xsd">
+            
+            <student rollno="1">
+                <name>
+                    <firstname>aashish</firstname>
+                    <lastname>bogati</lastname>
+                </name>
+                <address type="permanent">Achham</address>
+                <dob type="AD">2004-02-20</dob>
+                <email>aashishbogati@gmail.com</email>
+                <phone>9727272727</phone>
+            </student>
+</students>
